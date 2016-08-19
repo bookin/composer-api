@@ -67,4 +67,4 @@ $composer::runCommand($command, $options);
 
 ###Example
 
-You can see the work of the component on the example of yii2 module - (bookin/yii2-composer-gui)[https://github.com/bookin/yii2-composer-gui]
+You can see the work of the component on the example of yii2 module - [bookin/yii2-composer-gui](https://github.com/bookin/yii2-composer-gui)
