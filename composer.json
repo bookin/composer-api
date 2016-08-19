@@ -1,6 +1,7 @@
 {
     "name": "bookin/composer-api",
     "description": "Pack of functions for interfacing with composer",
+    "license": "MIT",
     "require": {
         "php": ">=5.4.0",
         "composer/composer": "*"
