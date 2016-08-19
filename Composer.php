@@ -22,6 +22,11 @@ class Composer
     private function __clone() {}
 
 
+    /**
+     * @param null $configFile
+     * @param null $configFilePath
+     * @return Composer
+     */
     public static function getInstance($configFile=null, $configFilePath=null)
     {
         if(!isset($configFile)|| !isset($configFilePath)){
@@ -94,7 +99,11 @@ class Composer
     }
 
 
-
+    /**
+     * @param $search
+     * @return array|mixed
+     * @throws \Composer\Json\JsonValidationException
+     */
     public static function searchPackage($search){
         /* @var $app Application */
         $app = self::getApplication();
@@ -109,6 +118,12 @@ class Composer
         return $results;
     }
 
+    /**
+     * @param $name
+     * @param null $version
+     * @return \Composer\Package\PackageInterface|null
+     * @throws \Exception
+     */
     public static function findPackage($name, $version=null)
     {
         if (strpos($name, '/') === false) {
@@ -121,6 +136,9 @@ class Composer
     }
 
 
+    /**
+     * @return WebApplication
+     */
     public static function getApplication(){
         if(empty(self::$app)){
             $app = new WebApplication();
