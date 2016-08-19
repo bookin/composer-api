@@ -1,6 +1,6 @@
 {
     "name": "bookin/composer-api",
-    "description": "Component for composer to create web interface",
+    "description": "Pack of functions for interfacing with composer",
     "require": {
         "php": ">=5.4.0",
         "composer/composer": "*"
@@ -8,12 +8,12 @@
     "authors": [
         {
             "name": "Anton Mikhailov",
-            "email": "@gmail.com"
+            "email": "issues.bookin@gmail.com"
         }
     ],
     "autoload": {
         "psr-4": {
-            "bookin\\composer\\api": ""
+            "bookin\\composer\\api\\": ""
         }
     }
 }
