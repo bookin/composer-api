@@ -1,6 +1,11 @@
 This is a pack of functions for interfacing with composer
 ============================
 
+[![Total Downloads](https://poser.pugx.org/bookin/composer-api/downloads)](https://packagist.org/packages/bookin/composer-api)
+[![Monthly Downloads](https://poser.pugx.org/bookin/composer-api/d/monthly)](https://packagist.org/packages/bookin/composer-api)
+[![License](https://poser.pugx.org/bookin/composer-api/license)](https://packagist.org/packages/bookin/composer-api)
+
+
 ## Installation
 
 The preferred way to install this extension is through [composer](http://getcomposer.org/download/). 
