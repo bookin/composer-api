@@ -24,8 +24,11 @@ class WebApplication extends Application
     public function getComposer($required = true, $disablePlugins = false)
     {
         if (null === $this->composer) {
+            $fileConfig = Composer::$configFile;
+            $configFilePath = Composer::$configFilePath;
             try {
-                $this->composer = Factory::create($this->io, null, $disablePlugins);
+                $factory = new Factory();
+                $this->composer = $factory->createComposer($this->io, $fileConfig, $disablePlugins, $configFilePath);
             } catch (\InvalidArgumentException $e) {
                 if ($required) {
                     $this->io->writeError($e->getMessage());
