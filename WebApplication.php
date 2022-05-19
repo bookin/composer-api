@@ -21,14 +21,14 @@ class WebApplication extends Application
      * @return \Composer\Composer
      * @throws JsonValidationException
      */
-    public function getComposer($required = true, $disablePlugins = false)
+    public function getComposer($required = true, $disablePlugins = false, $disableScripts = NULL)
     {
         if (null === $this->composer) {
             $fileConfig = Composer::$configFile;
             $configFilePath = Composer::$configFilePath;
             try {
                 $factory = new Factory();
-                $this->composer = $factory->createComposer($this->io, $fileConfig, $disablePlugins, $configFilePath);
+                $this->composer = $factory->createComposer($this->io, $fileConfig, $disablePlugins, $configFilePath, $disableScripts);
             } catch (\InvalidArgumentException $e) {
                 if ($required) {
                     $this->io->writeError($e->getMessage());
